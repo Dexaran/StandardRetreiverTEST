@@ -1,4 +1,3 @@
-
 pragma solidity ^0.4.25;
  
  contract StandardizedToken {
@@ -20,6 +19,7 @@ pragma solidity ^0.4.25;
  contract ERC20Token is StandardizedToken{
      constructor() public
      {
+         balances[msg.sender] = 10000;
          standard = "ERC20";
      }
      
@@ -35,6 +35,7 @@ pragma solidity ^0.4.25;
  contract ERC223Token is StandardizedToken{
      constructor() public
      {
+         balances[msg.sender] = 10000;
          standard = "ERC223";
      }
      
@@ -54,6 +55,7 @@ pragma solidity ^0.4.25;
  contract CustomToken is StandardizedToken{
      constructor() public
      {
+         balances[msg.sender] = 10000;
          standard = "Custom";
      }
      
